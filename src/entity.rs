@@ -55,12 +55,6 @@ impl Eraser for Entity {
     }
 }
 
-impl Paint for Entity {
-    fn colorize(&mut self, color: i32) {
-        self.color = color;
-    }
-}
-
 pub trait Create {
     fn spawn(
         x: f32,
@@ -69,10 +63,6 @@ pub trait Create {
         color: i32,
         entities: &DashMap<usize, Entity>,
     ) -> Option<usize>;
-}
-
-pub trait Paint {
-    fn colorize(&mut self, color: i32);
 }
 
 pub trait Eraser {

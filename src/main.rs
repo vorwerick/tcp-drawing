@@ -29,7 +29,7 @@ async fn main() {
         }
         Err(_) => {
             println!("Running as client, connecting to {}", &addr);
-            let (client_tx, client_rx) = unbounded::<Entity>();
+            let (client_tx, _client_rx) = unbounded::<Entity>();
             network::start_client(entities.clone(), client_tx.clone(), addr.clone());
             tx = client_tx;
             (false, None)
@@ -53,7 +53,7 @@ async fn main() {
     }
 }
 
-fn process(delta: f32, cooldown_press: &mut f32, entities: &DashMap<usize, Entity>) {
+fn process(delta: f32, cooldown_press: &mut f32, _entities: &DashMap<usize, Entity>) {
     // cooldown
     *cooldown_press -= delta;
     if *cooldown_press < 0.0 {

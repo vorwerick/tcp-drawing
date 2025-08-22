@@ -286,7 +286,7 @@ pub fn start_server(
     client_list
 }
 
-pub fn start_client(entities: Arc<DashMap<usize, Entity>>, tx: Sender<Entity>, addr: String) {
+pub fn start_client(entities: Arc<DashMap<usize, Entity>>, _tx: Sender<Entity>, addr: String) {
     thread::spawn(move || match TcpStream::connect(&addr) {
         Ok(mut stream) => {
             println!("Connected to server");

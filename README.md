@@ -15,7 +15,7 @@ A simple collaborative drawing application that works over TCP/IP networks. User
 ## Libraries Used
 
 - **macroquad (0.4.14)**: Graphics rendering and user input handling
-- **dashmap (7.0.0-rc2)**: Thread-safe concurrent hash map for storing drawing entities
+- **dashmap (7.0.0-rc2)**: Thread-safe concurrent hash map for storing drawing _entities
 - **serde (1.0.219)**: Serialization/deserialization framework for network communication
 - **serde_json (1.0)**: JSON support for serde
 - **crossbeam-channel (0.5.15)**: Multi-producer multi-consumer channels for thread communication
