@@ -2,6 +2,8 @@
 
 A simple collaborative drawing application that works over TCP/IP networks. Users can draw shapes in real-time, with changes synchronized between all connected clients.
 
+![Screenshot](/res/app-screenshot.png)
+
 ## Features
 
 - Client-server architecture over TCP
